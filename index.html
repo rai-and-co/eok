@@ -1,67 +1,268 @@
 <!DOCTYPE html>
 <html>
 <head>
+
   <title>EOK Homepage</title>
 
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+
   <style>
-    .head {
-      height: 250px;
-      width: 100%;
-      text-align: center;
-      border: 2px solid black;
-      border-radius: 10px;
-      margin-bottom: 35px;
-      background-color: lightblue;
-      font-size: 50px;
-      color: black;
+
+      /*BACKGROUND STYLES*/
+
+    body {
+      background-color: rgb(2, 3, 27);
+      margin: 0;
+      color: white;
+      font-family: 'Exo 2', sans-serif;
     }
 
-    .starter {
-      height: 75px;
-      width: 150px;
-      display: inline-block;
-      line-height: 75px;
-      text-align: center;
-      border: 2px solid black;
-      border-radius: 10px;
-      margin-bottom: 35px;
-      background-color: green;
-      font-size: 20px;
-      color: black;
-      text-decoration: none;
-      transition: opacity 0.35s;
-      box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);
+      /*APP LOGO STYLES*/
+
+    .app-logo {
       display: block;
-      margin: 0 auto;
+      margin: 10px auto 5px auto;
+      width: 300px;
     }
 
-    .starter:hover {
-      opacity: 0.8
+      /*HEADING STYLES*/
+
+    .head {
+      text-align: center;
+      border: none;
+      background-color: rgb(2, 3, 27);
+      margin-bottom: -25px;
+      font-size: 50px;
+      color: white;
     }
 
-    .starter:active {
-      opacity: 0.5
+    .head h1 {
+      margin: 0;
+      font-family: 'Cinzel', serif;
     }
+
+      /*SUBHEADING STYLES*/
+
+    .quote {
+      background-color: rgb(2, 3, 27);
+      text-align: center;
+      padding: 10px;
+      margin-bottom: -25px;
+      margin-top: 0;
+      font-family: 'Exo 2', sans-serif;
+      color: white;
+      font-size: 30px;
+      }
 
     .subhead {
-      background-color: red;
+      background-color: rgb(2, 3, 27);
+      text-align: center;
+      padding: 10px;
+      margin-bottom: 20px;
+      font-family: 'Exo 2', sans-serif;
+      color: white;
+      font-size: 20px;
     }
+
+        /*BUTTON STYLES*/
+
+        .button-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    /*SCIENCE BUTTON STYLES*/
+
+    .science {
+      height: 500px;
+      width: 300px;
+      border: 2px solid whitesmoke;
+      border-radius: 10px;
+      background-color: rgb(25, 206, 25);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      text-decoration: none;
+      box-shadow: 10px 10px 10px rgba(238, 234, 234, 0.15);
+      transition: background-color 0.5s;
+    }
+
+    .science:hover {
+      background-color: rgb(0, 255, 0);
+    }
+
+    .science:active {
+      background-color: green;
+    }
+
+    .science-logo {
+      width: 300px;
+    }
+
+    /*HISTORY BUTTON STYLES*/
+
+    .history {
+      height: 500px;
+      width: 300px;
+      border: 2px solid whitesmoke;
+      border-radius: 10px;
+      background-color: yellow;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      text-decoration: none;
+      box-shadow: 10px 10px 10px rgba(238, 234, 234, 0.15);
+      transition: background-color 0.5s;
+    }
+
+    .history:hover {
+      background-color: rgb(253, 253, 137);
+    }
+
+    .history:active {
+      background-color: rgb(177, 177, 31);
+    }
+
+    .history-logo {
+      width: 300px;
+    }
+
+    /*MATHEMATICS BUTTON STYLES*/
+
+    .math {
+      height: 500px;
+      width: 300px;
+      border: 2px solid whitesmoke;
+      border-radius: 10px;
+      background-color: red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      text-decoration: none;
+      box-shadow: 10px 10px 10px rgba(238, 234, 234, 0.15);
+      transition: background-color 0.5s;
+    }
+
+    .math:hover {
+      background-color: rgb(255, 69, 69);
+    }
+
+    .math:active {
+      background-color: rgb(185, 1, 1);
+    }
+
+    .math-logo {
+      width: 300px;
+    }
+
+    /*TECHNOLOGY BUTTON STYLES*/
+
+    .tech {
+      height: 500px;
+      width: 300px;
+      border: 2px solid whitesmoke;
+      border-radius: 10px;
+      background-color: orange;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      text-decoration: none;
+      box-shadow: 10px 10px 10px rgba(238, 234, 234, 0.15);
+      transition: background-color 0.5s;
+    }
+
+    .tech:hover {
+      background-color: rgb(252, 179, 44)
+    }
+
+    .tech:active {
+      background-color: rgb(218, 141, 0);
+    }
+
+    .tech-logo {
+      width: 300px;
+    }    
+
+    /*LANGUAGE BUTTON STYLES*/
+
+    .language {
+      height: 500px;
+      width: 300px;
+      border: 2px solid whitesmoke;
+      border-radius: 10px;
+      background-color: purple;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      text-decoration: none;
+      box-shadow: 10px 10px 10px rgba(238, 234, 234, 0.15);
+      transition: background-color 0.5s;
+    }
+
+    .language:hover {
+      background-color: rgb(177, 0, 177);
+    }
+
+    .language:active {
+      background-color: rgb(71, 1, 71);
+    }
+
+    .language-logo {
+      width: 300px;
+    }    
 
   </style>
 </head>
 
 <body>
 
+  <img class="app-logo" src="app-logo.png" alt="App Logo">
+  
   <div class="head">
     <h1>Encyclopedia Of Knowledge</h1>
   </div>
 
-  <a class="starter" href="starter.html">
-    Let's Start
-  </a>
+  <p class="quote">
+    Navigating the Information Infinite<br>Definitive Compendium of Human Understanding
+  </p>
 
   <p class="subhead">
     Welcome to the Encyclopedia of Knowledge.
+  </p>
+
+  <div class="button-row">
+
+  <a class="science" href="https://example.com">
+    <img class="science-logo" src="science-logo.png">
+  </a>
+
+  <a class="history" href="https://example.com">
+    <img class="history-logo" src="history-logo.png">
+  </a>
+
+  <a class="math" href="https://example.com">
+    <img class="math-logo" src="math-logo.png">
+  </a>
+
+  <a class="tech" href="https://example.com">
+    <img class="tech-logo" src="tech-logo.png">
+  </a>
+
+  <a class="language" href="https://example.com">
+    <img class="language-logo" src="language-logo.png">
+  </a>
+
+</div>
+  
+  <p class="subhead">
+    A product of RAI & Co.
   </p>
 
 </body>
