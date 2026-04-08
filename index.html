@@ -1,57 +1,68 @@
 <!DOCTYPE html>
-<HTML>
-  <HEAD>
+<html>
+<head>
+  <title>EOK Homepage</title>
 
-    <title>
-      EOK Homepage
-    </title>
+  <style>
+    .head {
+      height: 250px;
+      width: 100%;
+      text-align: center;
+      border: 2px solid black;
+      border-radius: 10px;
+      margin-bottom: 35px;
+      background-color: lightblue;
+      font-size: 50px;
+      color: black;
+    }
 
-    <STYLE>
+    .starter {
+      height: 75px;
+      width: 150px;
+      display: inline-block;
+      line-height: 75px;
+      text-align: center;
+      border: 2px solid black;
+      border-radius: 10px;
+      margin-bottom: 35px;
+      background-color: green;
+      font-size: 20px;
+      color: black;
+      text-decoration: none;
+      transition: opacity 0.35s;
+      box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);
+      display: block;
+      margin: 0 auto;
+    }
 
-  .head {
-    height: 250px;
-    width: 1905px;
-    text-align: center;
-    border: 2px solid black;
-    border-radius: 10px;
-    margin-bottom: 35px;
-    background-color: lightblue;
-    font-size: 40px;
-    color: black;
-  }
+    .starter:hover {
+      opacity: 0.8
+    }
 
-  .starter {
-    height: 100px;
-    width: 100px;
-    text-align: center;
-    border: 2px solid black;
-    border-radius: 10px;
-    margin-bottom: 35px;
-    background-color: green;
-    font-size: 30px;
-    color: black;
-  }
+    .starter:active {
+      opacity: 0.5
+    }
 
-  .subhead {
-    background-color: red;
-  }
+    .subhead {
+      background-color: red;
+    }
 
-</STYLE>
+  </style>
+</head>
 
-</HEAD>
-  <BODY>
+<body>
 
-    <button class="head">
-      <h1>Encyclopedia Of Knowledge</h1>
-    </button>
+  <div class="head">
+    <h1>Encyclopedia Of Knowledge</h1>
+  </div>
 
-        <a class = "starter" href="starter.html">
-      Let's Start
-    </a>
+  <a class="starter" href="starter.html">
+    Let's Start
+  </a>
 
-    <p class="subhead">
-      Welcome to the Encyclopedia of Knowledge.
-    </p>
+  <p class="subhead">
+    Welcome to the Encyclopedia of Knowledge.
+  </p>
 
-  </BODY>
-</HTML>
+</body>
+</html>
