@@ -9,29 +9,19 @@
 
   <style>
 
-      /*BACKGROUND STYLES*/
-
     body {
       background-color: rgb(2, 3, 27);
       margin: 0;
-      color: white;
       font-family: 'Exo 2', sans-serif;
+      overflow-x: hidden;
     }
 
-      /*APP LOGO STYLES*/
-
-    .app-logo {
-      display: block;
-      margin: 10px auto 5px auto;
-      width: 300px;
+    * {
+      box-sizing: border-box;
     }
-
-      /*HEADING STYLES*/
 
     .head {
       text-align: center;
-      border: none;
-      background-color: rgb(2, 3, 27);
       margin-bottom: -25px;
       font-size: 50px;
       color: white;
@@ -42,195 +32,238 @@
       font-family: 'Cinzel', serif;
     }
 
-      /*SUBHEADING STYLES*/
-
     .quote {
-      background-color: rgb(2, 3, 27);
       text-align: center;
       padding: 10px;
       margin-bottom: -25px;
-      margin-top: 0;
-      font-family: 'Exo 2', sans-serif;
-      color: white;
       font-size: 30px;
-      }
+      color: white;
+    }
 
     .subhead {
-      background-color: rgb(2, 3, 27);
       text-align: center;
       padding: 10px;
       margin-bottom: 20px;
-      font-family: 'Exo 2', sans-serif;
-      color: white;
       font-size: 20px;
+      color: white;
     }
 
-        /*BUTTON STYLES*/
-
-        .button-row {
+    .button-row {
       display: flex;
       justify-content: center;
       gap: 20px;
+      flex-wrap: wrap;
     }
 
-    /*SCIENCE BUTTON STYLES*/
+      /* BUTTON BASE */
 
-    .science {
-      height: 500px;
-      width: 300px;
-      border: 2px solid whitesmoke;
-      border-radius: 10px;
-      background-color: rgb(25, 206, 25);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 0 auto;
-      text-decoration: none;
-      box-shadow: 10px 10px 10px rgba(238, 234, 234, 0.15);
-      transition: background-color 0.5s;
-    }
-
-    .science:hover {
-      background-color: rgb(0, 255, 0);
-    }
-
-    .science:active {
-      background-color: green;
-    }
-
-    .science-logo {
-      width: 300px;
-    }
-
-    /*HISTORY BUTTON STYLES*/
-
-    .history {
-      height: 500px;
-      width: 300px;
-      border: 2px solid whitesmoke;
-      border-radius: 10px;
-      background-color: yellow;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 0 auto;
-      text-decoration: none;
-      box-shadow: 10px 10px 10px rgba(238, 234, 234, 0.15);
-      transition: background-color 0.5s;
-    }
-
-    .history:hover {
-      background-color: rgb(253, 253, 137);
-    }
-
-    .history:active {
-      background-color: rgb(177, 177, 31);
-    }
-
-    .history-logo {
-      width: 300px;
-    }
-
-    /*MATHEMATICS BUTTON STYLES*/
-
-    .math {
-      height: 500px;
-      width: 300px;
-      border: 2px solid whitesmoke;
-      border-radius: 10px;
-      background-color: red;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 0 auto;
-      text-decoration: none;
-      box-shadow: 10px 10px 10px rgba(238, 234, 234, 0.15);
-      transition: background-color 0.5s;
-    }
-
-    .math:hover {
-      background-color: rgb(255, 69, 69);
-    }
-
-    .math:active {
-      background-color: rgb(185, 1, 1);
-    }
-
-    .math-logo {
-      width: 300px;
-    }
-
-    /*TECHNOLOGY BUTTON STYLES*/
-
-    .tech {
-      height: 500px;
-      width: 300px;
-      border: 2px solid whitesmoke;
-      border-radius: 10px;
-      background-color: orange;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 0 auto;
-      text-decoration: none;
-      box-shadow: 10px 10px 10px rgba(238, 234, 234, 0.15);
-      transition: background-color 0.5s;
-    }
-
-    .tech:hover {
-      background-color: rgb(252, 179, 44)
-    }
-
-    .tech:active {
-      background-color: rgb(218, 141, 0);
-    }
-
-    .tech-logo {
-      width: 300px;
-    }    
-
-    /*LANGUAGE BUTTON STYLES*/
-
+    .science,
+    .history,
+    .math,
+    .tech,
     .language {
       height: 500px;
       width: 300px;
       border: 2px solid whitesmoke;
       border-radius: 10px;
-      background-color: purple;
+
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin: 0 auto;
+      text-align: center;
+      padding: 15px;
+      font-style: oblique;
       text-decoration: none;
+      color: rgb(255, 255, 255);
+      font-size: 28px;
+
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 35px;
+
       box-shadow: 10px 10px 10px rgba(238, 234, 234, 0.15);
-      transition: background-color 0.5s;
+      transition: transform 0.1s;
+      backdrop-filter: blur(2px);
     }
 
-    .language:hover {
-      background-color: rgb(177, 0, 177);
+    .button-glassbox {
+      height: 300px;
+      width: 250px;
+      background: rgba(255, 255, 255, 0.35);
+      border-radius: 10px;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
+    .button-glassbox b {
+      color: black;
+      text-shadow: none;
+    }
+
+      /*BUTTON HEADING STYLES*/
+
+    .science h2,
+    .history h2,
+    .math h2,
+    .tech h2,
+    .language h2 {
+      font-size: 35px;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+      position: relative;
+      z-index: 1;
+      color: white;
+    }
+
+      /* BACKGROUNDS */
+
+    .science { 
+      background: url("https://img.freepik.com/free-vector/hand-drawn-colorful-science-education-background_23-2148490027.jpg") 
+      center/cover no-repeat; 
+    }
+
+    .history { 
+      background: url("https://www.shutterstock.com/image-photo/old-geographical-globe-book-science-600nw-2605441241.jpg") 
+      center/cover no-repeat; 
+    }
+
+    .math { 
+      background: url("https://img.freepik.com/free-photo/blackboard-inscribed-with-scientific-formulas-calculations_1150-19413.jpg") 
+      center/cover no-repeat; 
+    }
+
+    .tech { 
+      background: url("https://static.vecteezy.com/system/resources/thumbnails/026/423/787/small/abstract-technology-background-with-circuit-board-and-blue-lights-digital-communication-line-concept-graphic-hardware-computer-tech-integrated-energy-design-information-internet-generative-ai-photo.jpg") 
+      center/cover no-repeat; 
+    }
+
+    .language { 
+      background: url("https://wallpaperaccess.com/full/1260521.jpg") 
+      center/cover no-repeat; 
+    }
+
+      /* OVERLAY */
+
+    .science::before,
+    .history::before,
+    .math::before,
+    .tech::before,
+    .language::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      transition: 0.3s;
+      z-index: 0;
+    }
+
+      /* HOVER = LIGHTER */
+
+    .science:hover::before,
+    .history:hover::before,
+    .math:hover::before,
+    .tech:hover::before,
+    .language:hover::before {
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+      /* CLICK = DARKER */
+
+    .science:active::before,
+    .history:active::before,
+    .math:active::before,
+    .tech:active::before,
+    .language:active::before {
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+      /* PRESS EFFECT */
+
+    .science:active,
+    .history:active,
+    .math:active,
+    .tech:active,
     .language:active {
-      background-color: rgb(71, 1, 71);
+      transform: scale(0.97);
     }
 
-    .language-logo {
-      width: 300px;
-    }    
+      /* KEEP TEXT ABOVE OVERLAY */
+
+    .science h2, .history h2, .math h2, .tech h2, .language h2 {
+      color: white;
+      position: relative;
+      z-index: 1;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+    }
+
+    .button-glassbox b {
+      position: relative;
+      z-index: 1;
+      color: black;
+      text-shadow: none;
+    }
+
+      /*FOOTER*/
+
+    .footer {
+  background-color: rgb(10, 15, 60);
+  color: white;
+  padding: 40px 20px;
+  margin-top: 50px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  text-align: center;
+}
+
+.footer-section {
+  max-width: 250px;
+}
+
+.footer-section h3 {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.footer-section p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.footer-section a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+.footer-section a:hover {
+  color: cyan;
+  transform: translateX(5px);
+}
 
   </style>
 </head>
 
 <body>
 
-  <img class="app-logo" src="app-logo.png" alt="App Logo">
-  
   <div class="head">
+    <img class="app-logo" src="https://via.placeholder.com/300" alt="App Logo">
     <h1>Encyclopedia Of Knowledge</h1>
   </div>
 
   <p class="quote">
-    Navigating the Information Infinite<br>Definitive Compendium of Human Understanding
+    Navigating the Information Infinite<br>
+    Definitive Compendium of Human Understanding
   </p>
 
   <p class="subhead">
@@ -239,31 +272,136 @@
 
   <div class="button-row">
 
-  <a class="science" href="https://example.com">
-    <img class="science-logo" src="science-logo.png">
-  </a>
+    <a class="science" href="#">
+      <h2>Science</h2>
+      <div class="button-glassbox">
+        <b>
+          Exploring the Fabric of Reality Where All Disciplines Meet
+        </b>
+      </div>
+    </a>
 
-  <a class="history" href="https://example.com">
-    <img class="history-logo" src="history-logo.png">
-  </a>
+    <a class="history" href="#">
+      <h2>History</h2>
+      <div class="button-glassbox">
+        <b>
+          Tracing the Roots of Human Existence From Pre-Literate Societies to the Modern Era
+        </b>
+      </div>
+    </a>
 
-  <a class="math" href="https://example.com">
-    <img class="math-logo" src="math-logo.png">
-  </a>
+    <a class="math" href="#">
+      <h2>Mathematics</h2>
+      <div class="button-glassbox">
+        <b>
+          The Logic That Governs Reality From Equations to Solutions
+        </b>
+      </div>
+    </a>
 
-  <a class="tech" href="https://example.com">
-    <img class="tech-logo" src="tech-logo.png">
-  </a>
+    <a class="tech" href="#">
+      <h2>Technology</h2>
+      <div class="button-glassbox">
+        <b>
+          From the Wheel to the Mechanics of the Modern Age
+        </b>
+      </div>
+    </a>
 
-  <a class="language" href="https://example.com">
-    <img class="language-logo" src="language-logo.png">
-  </a>
+    <a class="language" href="#">
+      <h2>Language</h2>
+      <div class="button-glassbox">
+        <b>
+          Understanding the Roots of Communication
+        </b>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="footer">
+
+  <div class="footer-content">
+
+    <div class="footer-section">
+
+      <h3>
+        RAI & Co.
+      </h3>
+
+      <p>
+        Encyclopedia of Knowledge
+      </p>
+
+      <p>
+        Exploring knowledge, one topic at a time.
+      </p>
+
+    </div>
+
+    <div class="footer-section">
+
+      <h3>
+        Explore
+      </h3>
+
+      <a href="#">
+        Science
+      </a>
+
+      <a href="#">
+        History
+      </a>
+
+      <a href="#">
+        Math
+      </a>
+
+      <a href="#">
+        Technology
+      </a>
+
+      <a href="#">
+        Language
+      </a>
+
+    </div>
+
+    <div class="footer-section">
+
+      <h3>
+        Info
+      </h3>
+
+      <p>
+        © 2026 All Rights Reserved
+      </p>
+
+      <p>
+        Created by RAI & Co.
+      </p>
+      
+    </div>
+
+    <div class="footer-section">
+
+      <h3>
+        Links
+      </h3>
+
+      <a href="#">
+        Scratch link
+      </a>
+
+      <a href=#>
+        RAI & Co. Homepage
+      </a>
+      
+    </div>
+
+  </div>
 
 </div>
-  
-  <p class="subhead">
-    A product of RAI & Co.
-  </p>
 
 </body>
 </html>
