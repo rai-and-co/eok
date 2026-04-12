@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>EOK Natural Science Page</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+
+  <style>
+
+    body {
+      background-color: rgb(2, 3, 27);
+      margin: 0;
+      font-family: 'Exo 2', sans-serif;
+      overflow-x: hidden;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .head {
+      text-align: center;
+      margin-bottom: -25px;
+      font-size: 50px;
+      color: white;
+    }
+
+    .head h1 {
+      margin: 0;
+      font-family: 'Cinzel', serif;
+    }
+
+    .quote {
+      text-align: center;
+      padding: 10px;
+      margin-bottom: -25px;
+      font-size: 30px;
+      color: white;
+    }
+
+    .subhead {
+      text-align: center;
+      padding: 10px;
+      margin-bottom: 20px;
+      font-size: 20px;
+      color: white;
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+      /* BUTTON BASE */
+
+    .physical-science,
+    .life-science,
+    .earth-science {
+      height: 500px;
+      width: 300px;
+      border: 2px solid whitesmoke;
+      border-radius: 10px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 15px;
+      font-style: oblique;
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      font-size: 28px;
+
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 35px;
+
+      box-shadow: 10px 10px 10px rgba(238, 234, 234, 0.15);
+      transition: transform 0.1s;
+      backdrop-filter: blur(2px);
+    }
+
+    .button-glassbox {
+      height: 300px;
+      width: 250px;
+      background: rgba(255, 255, 255, 0.35);
+      border-radius: 10px;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .button-glassbox b {
+      color: black;
+      text-shadow: none;
+    }
+
+      /*BUTTON HEADING STYLES*/
+
+    .physical-science h2,
+    .life-science h2,
+    .earth-science h2 {
+      font-size: 35px;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+      position: relative;
+      z-index: 1;
+      color: white;
+    }
+
+      /* BACKGROUNDS */
+
+    .physical-science { 
+      background: url("https://img.freepik.com/premium-vector/physics-education-seamless-pattern-icons-formulas-background-atomic-nuclear-experiments_248627-4331.jpg?semt=ais_hybrid&w=740&q=80") 
+      center/cover no-repeat; 
+    }
+
+    .life-science { 
+      background: url("https://img.freepik.com/premium-photo/neon-science-abstract-background-with-glowing-planets-test-tubes-atoms_1034924-57758.jpg?w=360") 
+      center/cover no-repeat; 
+    }
+
+    .earth-science { 
+      background: url("https://img.freepik.com/premium-photo/planet-space-with-rainbow-background_1064589-80170.jpg?semt=ais_hybrid&w=740&q=80") 
+      center/cover no-repeat; 
+    }
+
+      /* OVERLAY */
+
+    .physical-science::before,
+    .life-science::before,
+    .earth-science::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      transition: 0.3s;
+      z-index: 0;
+    }
+
+      /* HOVER = LIGHTER */
+
+    .physical-science:hover::before,
+    .life-science:hover::before,
+    .earth-science:hover::before {
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+      /* CLICK = DARKER */
+
+    .physical-science:active::before,
+    .life-science:active::before,
+    .earth-science:active::before {
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+      /* PRESS EFFECT */
+
+    .physical-science:active,
+    .life-science:active,
+    .earth-science:active {
+      transform: scale(0.97);
+    }
+
+      /* KEEP TEXT ABOVE OVERLAY */
+
+    .physical-science h2, .life-science h2, .earth-science h2 {
+      color: white;
+      position: relative;
+      z-index: 1;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+    }
+
+    .button-glassbox b {
+      position: relative;
+      z-index: 1;
+      color: black;
+      text-shadow: none;
+    }
+
+      /*FOOTER*/
+
+    .footer {
+      background-color: rgb(10, 15, 60);
+      color: white;
+      padding: 40px 20px;
+      margin-top: 50px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 30px;
+      text-align: center;
+    }
+
+    .footer-section {
+      max-width: 250px;
+    }
+
+    .footer-section h3 {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    .footer-section p {
+      margin: 5px 0;
+      font-size: 16px;
+    }
+
+    .footer-section a {
+      display: block;
+      text-decoration: none;
+      color: white;
+      margin: 5px 0;
+      transition: 0.3s;
+    }
+
+    .footer-section a:hover {
+      color: cyan;
+      transform: translateX(5px);
+    }
+
+    .info-content p1 {
+      background-color: wheat;
+      border-radius: 5px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="head">
+    <img class="app-logo" src="https://via.placeholder.com/300" alt="App Logo">
+    <h1>Natural Science</h1>
+  </div>
+
+  <p class="quote">
+    Exploring the Fabric of Reality
+    <br>
+    Where All Disciplines Meet
+  </p>
+
+  <p class="subhead">
+    Welcome to the Natural Science Page of the Encyclopedia of Knowledge.
+  </p>
+
+  <div class="button-row">
+
+    <a class="physical-science" href="#">
+      <h2>Physical Science</h2>
+      <div class="button-glassbox">
+        <b>
+          Exploring the Laws That Govern the Physical World
+        </b>
+      </div>
+    </a>
+
+    <a class="life-science" href="#">
+      <h2>Life Science</h2>
+      <div class="button-glassbox">
+        <b>
+          Exploring the Diversity of Life From Genetic Codes to Complex Organisms
+        </b>
+      </div>
+    </a>
+
+    <a class="earth-science" href="#">
+      <h2>Earth Sciences</h2>
+      <div class="button-glassbox">
+        <b>
+          Decoding the Architecture of our Home
+        </b>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="info-content">
+
+    <p1>
+        Lot's of amazing information coming soon!!!!!!!!!
+    </p1>
+
+    <p2>
+        Lot's of amazing information coming soon!!!!!!!!!
+    </p2>
+
+    <p1>
+        Lot's of amazing information coming soon!!!!!!!!!
+    </p1>
+
+    <p2>
+        Lot's of amazing information coming soon!!!!!!!!!
+    </p2>
+
+  </div>
+
+  <div class="footer">
+
+  <div class="footer-content">
+
+    <div class="footer-section">
+
+      <h3>
+        RAI & Co.
+      </h3>
+
+      <p>
+        Encyclopedia of Knowledge
+      </p>
+
+      <p>
+        Exploring knowledge, one topic at a time.
+      </p>
+
+    </div>
+
+    <div class="footer-section">
+
+      <h3>
+        Go Back
+      </h3>
+
+      <a href="https://rai-and-co.github.io/eok/">
+        Encyclopedia Of Knowledge
+      </a>
+      
+    </div>
+
+    <div class="footer-section">
+
+      <h3>
+        Explore
+      </h3>
+
+      <a href="#">
+        Physical Science
+      </a>
+
+      <a href="#">
+        Life Science
+      </a>
+
+      <a href="#">
+        Earth Science
+      </a>
+
+    </div>
+
+    <div class="footer-section">
+
+      <h3>
+        Explore More
+      </h3>
+
+      <a href=#>
+        topic
+      </a>
+
+      <a href=#>
+        topic
+      </a>
+      
+    </div>
+
+    <div class="footer-section">
+
+    <div class="footer-section">
+
+      <h3>
+        Info
+      </h3>
+
+      <p>
+        © 2026 All Rights Reserved
+      </p>
+
+      <p>
+        Created by RAI & Co.
+      </p>
+      
+    </div>
+
+    <div class="footer-section">
+
+      <h3>
+        Links
+      </h3>
+
+      <a href="#">
+        Scratch link
+      </a>
+
+      <a href=#>
+        RAI & Co. Homepage
+      </a>
+      
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+  </html>
