@@ -57,9 +57,9 @@
 
       /* BUTTON BASE */
 
-    .physical-science,
-    .life-science,
-    .earth-science {
+    .natural-science,
+    .social-science,
+    .formal-science {
       height: 500px;
       width: 300px;
       border: 2px solid whitesmoke;
@@ -103,9 +103,9 @@
 
       /*BUTTON HEADING STYLES*/
 
-    .physical-science h2,
-    .life-science h2,
-    .earth-science h2 {
+    .natural-science h2,
+    .social-science h2,
+    .formal-science h2 {
       font-size: 35px;
       margin-bottom: 10px;
       letter-spacing: 1px;
@@ -116,26 +116,26 @@
 
       /* BACKGROUNDS */
 
-    .physical-science { 
+    .natural-science { 
       background: url("https://img.freepik.com/premium-vector/physics-education-seamless-pattern-icons-formulas-background-atomic-nuclear-experiments_248627-4331.jpg?semt=ais_hybrid&w=740&q=80") 
       center/cover no-repeat; 
     }
 
-    .life-science { 
+    .social-science { 
       background: url("https://img.freepik.com/premium-photo/neon-science-abstract-background-with-glowing-planets-test-tubes-atoms_1034924-57758.jpg?w=360") 
       center/cover no-repeat; 
     }
 
-    .earth-science { 
+    .formal-science { 
       background: url("https://img.freepik.com/premium-photo/planet-space-with-rainbow-background_1064589-80170.jpg?semt=ais_hybrid&w=740&q=80") 
       center/cover no-repeat; 
     }
 
       /* OVERLAY */
 
-    .physical-science::before,
-    .life-science::before,
-    .earth-science::before {
+    .natural-science::before,
+    .social-science::before,
+    .formal-science::before {
       content: "";
       position: absolute;
       inset: 0;
@@ -147,31 +147,31 @@
 
       /* HOVER = LIGHTER */
 
-    .physical-science:hover::before,
-    .life-science:hover::before,
-    .earth-science:hover::before {
+    .natural-science:hover::before,
+    .social-science:hover::before,
+    .formal-science:hover::before {
       background: rgba(0, 0, 0, 0.1);
     }
 
       /* CLICK = DARKER */
 
-    .physical-science:active::before,
-    .life-science:active::before,
-    .earth-science:active::before {
+    .natural-science:active::before,
+    .social-science:active::before,
+    .formal-science:active::before {
       background: rgba(0, 0, 0, 0.6);
     }
 
       /* PRESS EFFECT */
 
-    .physical-science:active,
-    .life-science:active,
-    .earth-science:active {
+    .natural-science:active,
+    .social-science:active,
+    .formal-science:active {
       transform: scale(0.97);
     }
 
       /* KEEP TEXT ABOVE OVERLAY */
 
-    .physical-science h2, .life-science h2, .earth-science h2 {
+    .natural-science h2, .social-science h2, .formal-science h2 {
       color: white;
       position: relative;
       z-index: 1;
@@ -257,7 +257,7 @@
   <div class="button-row">
 
     <a class="physical-science" href="#">
-      <h2>Physical Science</h2>
+      <h2>Natural Science</h2>
       <div class="button-glassbox">
         <b>
           Exploring the Laws That Govern the Physical World
@@ -266,7 +266,7 @@
     </a>
 
     <a class="life-science" href="#">
-      <h2>Life Science</h2>
+      <h2>Social Science</h2>
       <div class="button-glassbox">
         <b>
           Exploring the Diversity of Life From Genetic Codes to Complex Organisms
@@ -275,7 +275,7 @@
     </a>
 
     <a class="earth-science" href="#">
-      <h2>Earth Sciences</h2>
+      <h2>Formal Sciences</h2>
       <div class="button-glassbox">
         <b>
           Decoding the Architecture of our Home
@@ -295,13 +295,13 @@
         Lot's of amazing information coming soon!!!!!!!!!
     </p2>
 
-    <p3>
+    <p1>
         Lot's of amazing information coming soon!!!!!!!!!
-    </p3>
+    </p1>
 
-    <p4>
+    <p2>
         Lot's of amazing information coming soon!!!!!!!!!
-    </p4>
+    </p2>
 
   </div>
 
@@ -344,15 +344,15 @@
       </h3>
 
       <a href="#">
-        Physical Science
+        Natural Science
       </a>
 
       <a href="#">
-        Life Science
+        Social Science
       </a>
 
       <a href="#">
-        Earth Science
+        Formal Science
       </a>
 
     </div>
