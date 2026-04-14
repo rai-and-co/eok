@@ -93,8 +93,21 @@
       margin-bottom: 35px;
 
       box-shadow: 10px 10px 10px rgba(238, 234, 234, 0.15);
-      transition: transform 0.1s;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
       backdrop-filter: blur(2px);
+    }
+
+    .natural-science:hover,
+    .social-science:hover,
+    .formal-science:hover {
+      transform: scale(1.05);
+      box-shadow: 15px 15px 20px rgba(238, 234, 234, 0.25);
+    }
+
+    .natural-science:active,
+    .social-science:active,
+    .formal-science:active {
+      transform: scale(0.95);
     }
 
     .button-glassbox {
@@ -250,6 +263,11 @@
       align-items: center;
       gap: 20px;
       margin: 25px 0;
+      transition: transform 0.2s ease;
+    }
+
+    .info-row:hover {
+      transform: scale(1.03);
     }
 
     .info-row img {
