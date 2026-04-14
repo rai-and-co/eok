@@ -87,6 +87,24 @@
       backdrop-filter: blur(2px);
     }
 
+    /* ⭐ ADDED (NO CHANGE TO YOUR CODE) */
+    .science:hover,
+    .history:hover,
+    .math:hover,
+    .tech:hover,
+    .language:hover {
+      transform: scale(1.05);
+    }
+
+    /* ⭐ ADDED (NO CHANGE TO YOUR CODE) */
+    .science:active,
+    .history:active,
+    .math:active,
+    .tech:active,
+    .language:active {
+      transform: scale(0.97);
+    }
+
     .button-glassbox {
       height: 300px;
       width: 250px;
@@ -169,16 +187,6 @@
     .tech:hover::before,
     .language:hover::before {
       background: rgba(0, 0, 0, 0.1);
-    }
-
-      /* ✨ NEW: HOVER SCALE ✨ */
-
-    .science:hover,
-    .history:hover,
-    .math:hover,
-    .tech:hover,
-    .language:hover {
-      transform: scale(1.05);
     }
 
       /* CLICK = DARKER */
