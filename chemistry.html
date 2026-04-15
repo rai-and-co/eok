@@ -1,1 +1,530 @@
+<!DOCTYPE html>
+<html>
+<head>
 
+  <title>EOK Chemistry Page</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+
+  <style>
+
+    body {
+      background-color: rgb(2, 3, 27);
+      margin: 0;
+      font-family: 'Exo 2', sans-serif;
+      overflow-x: hidden;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .head {
+      text-align: center;
+      margin-bottom: -25px;
+      font-size: 50px;
+      color: white;
+      padding: 40px 0 20px 0;
+      position: relative;
+    }
+
+    .head::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 40px;
+      background: rgb(2, 3, 27);
+    }
+
+    .head h1 {
+      margin: 0;
+      font-family: 'Cinzel', serif;
+    }
+
+    .quote {
+      text-align: center;
+      padding: 10px;
+      margin-bottom: -25px;
+      font-size: 30px;
+      color: white;
+    }
+
+    .subhead {
+      text-align: center;
+      padding: 10px;
+      margin-bottom: 20px;
+      font-size: 20px;
+      color: white;
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+      /* BUTTON BASE */
+
+    .general-chemistry,
+    .organic-chemistry,
+    .inorganic-chemistry {
+      height: 500px;
+      width: 300px;
+      border: 2px solid whitesmoke;
+      border-radius: 10px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 15px;
+      font-style: oblique;
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      font-size: 28px;
+
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 35px;
+
+      box-shadow: 10px 10px 10px rgba(238, 234, 234, 0.15);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      backdrop-filter: blur(2px);
+    }
+
+    .general-chemistry:hover,
+    .organic-chemistry:hover,
+    .inorganic-chemistry:hover {
+      transform: scale(1.05);
+      box-shadow: 15px 15px 20px rgba(238, 234, 234, 0.25);
+    }
+
+    .general-chemistry:active,
+    .organic-chemistry:active,
+    .inorganic-chemistry:active {
+      transform: scale(0.95);
+    }
+
+    .button-glassbox {
+      height: 300px;
+      width: 250px;
+      background: rgba(255, 255, 255, 0.35);
+      border-radius: 10px;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .button-glassbox b {
+      color: black;
+      text-shadow: none;
+    }
+
+      /*BUTTON HEADING STYLES*/
+
+    .general-chemistry h2,
+    .organic-chemistry h2,
+    .inorganic-chemistry h2 {
+      font-size: 35px;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+      position: relative;
+      z-index: 1;
+      color: white;
+    }
+
+      /* BACKGROUNDS */
+
+    .general-chemistry { 
+      background: url("https://t4.ftcdn.net/jpg/09/44/46/83/360_F_944468363_Bk7m2G91y9ZPdy9MQqk5xG7s9Bjfwc5R.jpg") 
+      center/cover no-repeat; 
+    }
+
+    .organic-chemistry { 
+      background: url("https://t3.ftcdn.net/jpg/04/11/66/58/360_F_411665826_NiC2HAz25yNOzXPseWn1UK1YlepQy2dB.jpg") 
+      center/cover no-repeat; 
+    }
+
+    .inorganic-chemistry { 
+      background: url("https://t3.ftcdn.net/jpg/04/11/66/58/360_F_411665826_NiC2HAz25yNOzXPseWn1UK1YlepQy2dB.jpg") 
+      center/cover no-repeat; 
+    }
+
+      /* OVERLAY */
+
+    .general-chemistry::before,
+    .organic-chemistry::before,
+    .inorganic-chemistry::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      transition: 0.3s;
+      z-index: 0;
+    }
+
+      /* HOVER = LIGHTER */
+
+    .general-chemistry:hover::before,
+    .organic-chemistry:hover::before,
+    .inorganic-chemistry:hover::before {
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+      /* CLICK = DARKER */
+
+    .general-chemistry:active::before,
+    .organic-chemistry:active::before,
+    .inorganic-chemistry:active::before {
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+      /* PRESS EFFECT */
+
+    .general-chemistry:active,
+    .organic-chemistry:active,
+    .inorganic-chemistry:active {
+      transform: scale(0.97);
+    }
+
+      /* KEEP TEXT ABOVE OVERLAY */
+
+    .general-chemistry h2, .organic-chemistry h2, .inorganic-chemistry h2 {
+      color: white;
+      position: relative;
+      z-index: 1;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+    }
+
+    .button-glassbox b {
+      position: relative;
+      z-index: 1;
+      color: black;
+      text-shadow: none;
+    }
+
+      /* FOOTER */
+
+    .footer {
+      background-color: rgb(10, 15, 60);
+      color: white;
+      padding: 40px 20px;
+      margin-top: 50px;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 30px;
+      text-align: center;
+    }
+
+    .footer-section {
+      max-width: 250px;
+    }
+
+    .footer-section h3 {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    .footer-section p {
+      margin: 5px 0;
+      font-size: 16px;
+    }
+
+    .footer-section a {
+      display: block;
+      text-decoration: none;
+      color: white;
+      margin: 5px 0;
+      transition: 0.3s;
+    }
+
+    .footer-section a:hover {
+      color: cyan;
+      transform: translateX(5px);
+    }
+
+    .info-content {
+      padding: 20px 350px;
+    }
+
+    .info-row {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin: 25px 0;
+      transition: transform 0.2s ease;
+    }
+
+    .info-row:hover {
+      transform: scale(1.03);
+    }
+
+    .info-row img {
+      width: 400px;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .info-row:nth-child(odd) {
+      flex-direction: row-reverse;
+    }
+
+    .info-row p {
+      background-color: wheat;
+      border-radius: 5px;
+      width: 80%;
+      max-width: 900px;
+      padding: 40px;
+      font-size: 18px;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .info-row img.triple-img {
+      flex-direction: column;
+    }
+    .info-row img.second-img {
+      width: 400px;
+      height: auto;
+    }
+
+    .info-row img.first-img {
+      width: auto;
+      height: 250px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="head">
+    <img class="app-logo" src="https://via.placeholder.com/300" alt="App Logo">
+    <h1>Chemistry</h1>
+  </div>
+
+  <p class="quote">
+    Axioms of Atomic Structure and Periodicity
+  </p>
+
+  <p class="subhead">
+    Welcome to the Chemistry Page of the Encyclopedia of Knowledge.
+  </p>
+
+  <div class="button-row">
+    <div class="button-row">
+
+    <a class="general-chemistry" href="#">
+      <h2>General Chemistry</h2>
+        <div class="button-glassbox">
+          <b>
+            Principles of Chemical Equilibrium, Atomic Theory and the Elemental Periodicity
+          </b>
+        </div>
+    </a>
+
+    <a class="organic-chemistry" href="#">
+      <h2>Organic Chemistry</h2>
+        <div class="button-glassbox">
+          <b>
+            The Architecture of Carbon
+          </b>
+        </div>
+    </a>
+
+    <a class="inorganic-chemistry" href="#">
+      <h2>Inorganic Chemistry</h2>
+        <div class="button-glassbox">
+          <b>
+            Atomic Periodicity and the Systematic Trends of the Elements
+          </b>
+        </div>
+    </a>
+
+</div>
+  </div>
+
+  <div class="info-content">
+
+    <div class="info-row">
+      <img src="https://med.stanford.edu/content/sm/news/insights/2025/07/what-the-science-says--stanford-medicine-experts-break-it-down/jcr%3acontent/cq%3afeaturedimage.coreimg.jpg/1759714655947/lksc.jpg" class="first-img" alt="img">
+      <p>
+        Chemistry is the branch of science that studies matter and how it changes. It explains what things are made of and how they react with each other. Chemistry helps us understand the world at the level of atoms and molecules. It is often called the “central science” because it connects physics with biology.
+      </p>
+    </div>
+
+    <div class="info-row">
+      <div class="triple-img">
+      <img src="https://img.freepik.com/free-photo/blackboard-inscribed-with-scientific-formulas-calculations_1150-19413.jpg?semt=ais_hybrid&w=740&q=80" class="second-img" alt="img">
+      <img src="https://img.freepik.com/free-vector/chalkboard-background-with-chemistry-information_23-2148159840.jpg" alt="img">
+      <img src="https://img.freepik.com/free-vector/chalkboard-background-with-chemistry-information_23-2148159840.jpg" alt="img">
+      </div>
+    
+      <p>
+        1. General Chemistry
+      <br>
+        The study of matter, its properties, and how different substances interact and change.
+      <br><br>
+        2. Organic Chemistry
+      <br>
+        Study of carbon-based compounds (found in living things, fuels, plastics, medicines).
+      <br><br>
+        3. Inorganic Chemistry
+      <br>
+        Study of compounds that do not contain carbon (metals, minerals, salts).
+      </p>
+    </div>
+
+    <div class="info-row">
+      <img src="https://img.freepik.com/premium-vector/physics-education-seamless-pattern-icons-formulas-background-atomic-nuclear-experiments_248627-4331.jpg?semt=ais_hybrid&w=740&q=80" alt="img">
+      <p>
+        Chemists are scientists who study matter and chemical reactions. They explore how substances are made and how they change. They:
+      <br>
+        Study atoms and molecules
+      <br>
+        Investigate chemical reactions
+      <br>
+        Create new materials and medicines
+      <br>
+        Test and analyze substances
+      <br>
+        Solve problems using chemistry
+      <br><br>
+        Chemists work in labs, industries, hospitals, and schools. Their discoveries help make medicines, plastics, food, and many everyday products.
+      <br><br>
+        Chemistry is everywhere — in cooking, cleaning, medicines, plastics, and even in our own bodies.
+
+    </div>
+
+  </div>
+
+  <div class="footer">
+
+    <div class="footer-content">
+
+      <div class="footer-section">
+
+        <h3>
+          RAI & Co.
+        </h3>
+
+        <p>
+          Encyclopedia of Knowledge
+        </p>
+
+        <p>
+          Exploring knowledge, one topic at a time.
+        </p>
+
+      </div>
+
+      <div class="footer-section">
+
+        <h3>
+          Go Back
+        </h3>
+
+        <a href="https://rai-and-co.github.io/eok/">
+          Encyclopedia Of Knowledge
+        </a>
+
+        <a href="https://rai-and-co.github.io/eok/science.html">
+          Science
+        </a>
+
+        <a href="https://rai-and-co.github.io/eok/natural-science.html">
+          Natural Science
+        </a>
+
+        <a href="https://rai-and-co.github.io/eok/physical-science.html">
+          Physical Science
+        </a>
+
+      </div>
+
+      <div class="footer-section">
+
+        <h3>
+          Explore
+        </h3>
+
+        <a href="#">
+          General Chemistry
+        </a>
+
+        <a href="#">
+          Organic Chemistry
+        </a>
+
+        <a href="#">
+          Inorganic Chemistry
+        </a>
+
+      </div>
+
+      <div class="footer-section">
+
+        <h3>
+          Explore More
+        </h3>
+
+        <a href=#>
+          topic
+        </a>
+
+        <a href=#>
+          topic
+        </a>
+
+      </div>
+
+      <div class="footer-section">
+
+        <h3>
+          Info
+        </h3>
+
+        <p>
+          © 2026 All Rights Reserved
+        </p>
+
+        <p>
+          Created by RAI & Co.
+        </p>
+
+      </div>
+
+      <div class="footer-section">
+
+        <h3>
+          Links
+        </h3>
+
+        <a href="#">
+          Scratch link
+        </a>
+
+        <a href=#>
+          RAI & Co. Homepage
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
